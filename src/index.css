@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  background-color: aliceblue;
+}
+
+#todolist {
+  /* padding-right: 10px; */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  width: 20%;
+  background-color: #fff;
+  margin: 60px 0 0 30rem;
+}
