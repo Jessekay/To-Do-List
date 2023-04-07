@@ -28,3 +28,21 @@ const task = [
     index: 4,
   },
 ];
+function iterateTasks() {
+  task.forEach((item) => {
+    listElement.innerHTML
+        += `
+        <div class="list-properties">
+            <span class="left-items">
+                <input type="checkbox">
+                <p>${item.description}</p>
+            </span>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <hr>
+        `;
+  });
+
+  listContainer.appendChild(listElement);
+}
+iterateTasks();
