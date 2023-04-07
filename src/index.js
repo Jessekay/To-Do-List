@@ -1,5 +1,4 @@
-import Style from './index.css';
-
+import './index.css';
 
 // Get DOM
 const listElement = document.createElement('div');
