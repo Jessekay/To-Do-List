@@ -72,3 +72,12 @@ const removeItem = (itemIndex) => {
   }
 };
 
+// Removed all completed tasks
+const removeCompletedItems = () => {
+  todoList = todoList.filter((item) => !item.completed);
+  displayToDoList();
+  saveTodoList();
+};
+
+addButton.addEventListener('click', addItem);
+clearAll.addEventListener('click', removeCompletedItems);
