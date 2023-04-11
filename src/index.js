@@ -46,7 +46,7 @@ const addItem = () => {
     const taskItem = {
       description: task,
       completed: false,
-      index: todoList.length+1
+      index: todoList.length + 1,
     };
     todoList.push(taskItem);
     inputItem.value = '';
