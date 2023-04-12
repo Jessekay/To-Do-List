@@ -1,6 +1,6 @@
 import './index.css';
 
-let todoList = window.localStorage.getItem('todoList') ? JSON.parse(localStorage.getItem('todoList')) : [];
+let todoList = localStorage.getItem('todoList') ? JSON.parse(localStorage.getItem('todoList')) : [];
 const inputItem = document.querySelector('.inputs-field');
 const listContainer = document.querySelector('.list');
 const addButton = document.querySelector('.add-btn');
