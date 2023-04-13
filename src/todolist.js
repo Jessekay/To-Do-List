@@ -8,6 +8,7 @@ const addItem = (task) => {
     const taskItem = {
       description: task,
       completed: false,
+      index: todoList.length + 1,
     };
     todoList.push(taskItem);
     saveTodoList();
