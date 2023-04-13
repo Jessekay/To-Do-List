@@ -27,6 +27,13 @@ document.addEventListener('click', (event) => {
     displayToDoList(getTodoList());
   }
 });
-
+// Event listener for removing an item
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('remove-btn')) {
+    const itemIndex = parseInt(event.target.dataset.index, 10);
+    removeItem(itemIndex);
+    displayToDoList(getTodoList());
+  }
+});
 
 window.onload = displayToDoList();
