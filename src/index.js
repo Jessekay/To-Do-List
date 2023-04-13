@@ -1,6 +1,6 @@
 import './index.css';
 import {
-  getTodoList, addItem, markCompleted, removeItem, removeCompletedItems, editItem
+  getTodoList, addItem, removeItem, removeCompletedItems, editItem,
 } from './todolist.js';
 import displayToDoList from './dis.js';
 
@@ -8,7 +8,6 @@ const inputItem = document.querySelector('.field-input');
 const addButton = document.querySelector('.add-btn');
 const clearAll = document.querySelector('#clear-btn');
 
-console.log(getTodoList())
 let editIndex = -1;
 addButton.addEventListener('click', () => {
   if (editIndex === -1) {

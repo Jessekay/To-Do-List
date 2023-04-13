@@ -27,13 +27,13 @@ const editItem = (index, description) => {
   saveTodoList();
 };
 
- const markCompleted = (itemIndex) => {
-    if (itemIndex >= 0 && itemIndex < todoList.length) {
-      todoList[itemIndex].completed = !todoList[itemIndex].completed;
-      saveTodoList();
-    }
-  };
- 
+const markCompleted = (itemIndex) => {
+  if (itemIndex >= 0 && itemIndex < todoList.length) {
+    todoList[itemIndex].completed = !todoList[itemIndex].completed;
+    saveTodoList();
+  }
+};
+
 export {
-  getTodoList, addItem, removeItem, removeCompletedItems, editItem, markCompleted
+  getTodoList, addItem, removeItem, removeCompletedItems, editItem, markCompleted,
 };
