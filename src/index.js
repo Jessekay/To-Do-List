@@ -1,7 +1,7 @@
 import './index.css';
 
-let todoList = localStorage.getItem('todoList') ? JSON.parse(localStorage.getItem('todoList')) : [];
-const inputItem = document.querySelector('.inputs-field');
+let todoList = window.localStorage.getItem('todoList') ? JSON.parse(localStorage.getItem('todoList')) : [];
+const inputItem = document.querySelector('.field-input');
 const listContainer = document.querySelector('.list');
 const addButton = document.querySelector('.add-btn');
 const clearAll = document.querySelector('#clear-btn');
@@ -10,20 +10,20 @@ const displayToDoList = () => {
   listContainer.innerHTML = '';
   todoList.forEach((item, index) => {
     const listItem = document.createElement('div');
-    listItem.className = 'list-properties';
+    listItem.className = 'properties-list';
     listItem.innerHTML = `
-    <div class="both-sides">
-      <span class="left-items">
+    <div class="sides">
+      <span class="items-left">
         <input type="checkbox" ${item.completed ? 'checked' : ''}>
         <p>${item.description}</p>
       </span>
-      <span class="right-items">
-        <div id="remove-single"><i class="fa-solid fa-trash"></i></div>
+      <span class=items-right">
+        <div id="single-remove"><i class="fa-solid fa-trash"></i></div>
         <i class="fa-solid fa-ellipsis-vertical"></i>
       </span>
       </div>
     `;
-    listItem.querySelector('#remove-single').addEventListener('click', (event) => {
+    listItem.querySelector('#single-remove').addEventListener('click', (event) => {
       event.preventDefault();
       // eslint-disable-next-line no-use-before-define
       removeItem(index);
