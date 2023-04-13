@@ -35,5 +35,15 @@ document.addEventListener('click', (event) => {
     displayToDoList(getTodoList());
   }
 });
+// Event listener for editing an item
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('edit-btn')) {
+    const itemIndex = parseInt(event.target.dataset.index, 10);
+    inputItem.value = getTodoList()[itemIndex].description;
+    editIndex = itemIndex;
+    addButton.textContent = 'Save';
+  }
+});
+displayToDoList(getTodoList());
 
 window.onload = displayToDoList();
