@@ -1,7 +1,6 @@
 import {
   getTodoList, removeItem, editItem, markCompleted,
 } from './todolist.js';
-// import { markCompleted } from './complete.js';
 
 const listContainer = document.querySelector('.list');
 const displayToDoList = (todoList) => {
